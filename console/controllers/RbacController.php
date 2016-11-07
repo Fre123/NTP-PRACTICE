@@ -36,5 +36,35 @@ class RbacController extends Controller
         // usually implemented in your User model.
         $auth->assign($author, 2);
         $auth->assign($admin, 1);
-    }
+
+
+
+      }
+
+      public function actionCreateAuthorRule()
+{
+    $auth = Yii::$app->authManager;
+
+    // add the rule
+    $rule = new \console\rbac\AuthorRule();
+    $auth->add($rule);
+
+    // add the "updateOwnPost" permission and associate the rule with it.
+    $updateOwnPost = $auth->createPermission('updateOwnPost');
+    $updateOwnPost->description = 'Update own post';
+    $updateOwnPost->ruleName = $rule->name;
+    $auth->add($updateOwnPost);
+
+    // get the "updatePost" permission
+    $updatePost = $auth->getPermission('updatePost');
+
+    // get the "author" role
+    $author = $auth->getRole('author');
+
+    // "updateOwnPost" will be used from "updatePost"
+    $auth->addChild($updateOwnPost, $updatePost);
+
+    // allow "author" to update their own posts
+    $auth->addChild($author, $updateOwnPost);
+}
 }
