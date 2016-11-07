@@ -46,13 +46,23 @@ class SignupForm extends Model
         if (!$this->validate()) {
             return null;
         }
-        
+
         $user = new User();
         $user->username = $this->username;
         $user->email = $this->email;
         $user->setPassword($this->password);
         $user->generateAuthKey();
-        
+
+        $auth = Yii::$app->authManager;
+        $authorRole = $auth->getRole('author');
+
+        $rows = (new \yii\db\Query())->select('id')->from('user')->where('id in (SELECT MAX(id) FROM user)')->limit(10)->all();
+        $val= ArrayHelper::map($rows, 'id', 'id');
+        $id = implode($val);/*Convierte valor de arreglo a string*/
+
+        $auth->assign($authorRole,($id)+1);
+
+
         return $user->save() ? $user : null;
     }
 }
