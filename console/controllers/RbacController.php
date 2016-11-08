@@ -15,6 +15,11 @@ class RbacController extends Controller
         $createPost->description = 'Create a post';
         $auth->add($createPost);
 
+        // add "createPost" permission
+        $createPost = $auth->createPermission('viewPost');
+        $createPost->description = 'View a post';
+        $auth->add($createPost);
+
         // add "updatePost" permission
         $updatePost = $auth->createPermission('updatePost');
         $updatePost->description = 'Update post';

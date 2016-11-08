@@ -1,14 +1,14 @@
 <?php
 
-namespace frontend\models;
+namespace backend\models;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\models\Post;
+use backend\models\Post;
 
 /**
- * PostSearch represents the model behind the search form about `frontend\models\Post`.
+ * PostSearch represents the model behind the search form about `backend\models\Post`.
  */
 class PostSearch extends Post
 {
@@ -60,10 +60,10 @@ class PostSearch extends Post
         // grid filtering conditions
         $query->andFilterWhere([
             'ID' => $this->ID,
-            'Publicar' => 1,
+            'Publicar' => $this->Publicar,
             'Fecha_creacion' => $this->Fecha_creacion,
             'Fecha_edicion' => $this->Fecha_edicion,
-            'idAutor' => Yii::$app->user->identity->id,
+            'idAutor' => $this->idAutor,
         ]);
 
         $query->andFilterWhere(['like', 'Titulo', $this->Titulo])

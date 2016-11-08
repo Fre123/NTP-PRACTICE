@@ -1,14 +1,16 @@
 <?php
 
-namespace frontend\controllers;
+namespace backend\controllers;
 
 use Yii;
-use frontend\models\Post;
-use frontend\models\PostSearch;
+use backend\models\Post;
+use backend\models\PostSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\helpers\ArrayHelper;
+use yii\web\ForbiddenHttpException;
+use yii\filters\AccessControl;
+
 /**
  * PostController implements the CRUD actions for Post model.
  */
@@ -20,6 +22,16 @@ class PostController extends Controller
     public function behaviors()
     {
         return [
+          'access' => [
+          'class' => AccessControl::className(),
+          'rules' => [
+            [
+                'allow' => true,
+                'roles' => ['@'],
+            ],
+
+          ],
+          ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -38,10 +50,18 @@ class PostController extends Controller
         $searchModel = new PostSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
+        if (Yii::$app->user->can('viewPost')) {
+
+          return $this->render('index', [
+              'searchModel' => $searchModel,
+              'dataProvider' => $dataProvider,
+          ]);
+
+        }else{
+          throw new ForbiddenHttpException("Forbidden access");
+        }
+
+
     }
 
     /**
@@ -64,28 +84,18 @@ class PostController extends Controller
     public function actionCreate()
     {
         $model = new Post();
+        if (\Yii::$app->user->can('author')) {
+          if ($model->load(Yii::$app->request->post()) && $model->save()) {
+              return $this->redirect(['view', 'id' => $model->ID]);
+          } else {
+              return $this->render('create', [
+                  'model' => $model,
+              ]);
+          }
+  }else{
+        throw new ForbiddenHttpException("Forbidden access");
+       }
 
-        if ($model->load(Yii::$app->request->post())  ) {
-
-
-        $rows = (new \yii\db\Query())->select('id')->from('post')->where('id in (SELECT MAX(id) FROM post)')->limit(10)->all();
-        $val= ArrayHelper::map($rows, 'id', 'id');
-        $id = implode($val);/*Convierte valor de arreglo a string*/
-
-        $model->ID =  ($id+1);
-        $model->Publicar = 0;
-        $model->idAutor  = Yii::$app->user->identity->id;
-        $model->Fecha_creacion = date('y-m-d');
-
-        $model->save();
-
-
-            return $this->redirect(['view', 'id' => $model->ID]);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
-        }
     }
 
     /**
@@ -99,8 +109,7 @@ class PostController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-
-          return $this->redirect(['view', 'id' => $model->ID]);
+            return $this->redirect(['view', 'id' => $model->ID]);
         } else {
             return $this->render('update', [
                 'model' => $model,

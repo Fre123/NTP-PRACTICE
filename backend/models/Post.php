@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\models;
+namespace backend\models;
 
 use Yii;
 
@@ -31,7 +31,7 @@ class Post extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Titulo', 'Texto', 'Publicar'], 'required'],
+            [['ID', 'Titulo', 'Texto', 'Publicar', 'Fecha_creacion', 'idAutor'], 'required'],
             [['ID', 'Publicar', 'idAutor'], 'integer'],
             [['Texto'], 'string'],
             [['Fecha_creacion', 'Fecha_edicion'], 'safe'],

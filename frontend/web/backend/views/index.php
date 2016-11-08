@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel frontend\models\PostSearch */
+/* @var $searchModel backend\models\PostSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Posts';
@@ -26,8 +26,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'ID',
             'Titulo',
-            //'Texto:ntext',
-            //'Publicar',
+            'Texto:ntext',
+            'Publicar',
             'Fecha_creacion',
             // 'Fecha_edicion',
             // 'idAutor',

@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model frontend\models\Post */
+/* @var $model backend\models\Post */
 
 $this->title = $model->ID;
 $this->params['breadcrumbs'][] = ['label' => 'Posts', 'url' => ['index']];
@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="post-view">
 
-    <!--h1><!--?= Html::encode($this->title) ?></h1-->
+    <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->ID], ['class' => 'btn btn-primary']) ?>
@@ -25,20 +25,17 @@ $this->params['breadcrumbs'][] = $this->title;
         ]) ?>
     </p>
 
-    <!--?= DetailView::widget([
-  //      'model' => $model,
-  //      'attributes' => [
-  //          'ID',
-  //          'Titulo',
-  //          'Texto:ntext',
-  //          'Publicar',
-  //          'Fecha_creacion',
-  //          'Fecha_edicion',
-  //          'idAutor',
-  //      ],
-  //  ]) ?-->
-  <h1><strong>Articulos</strong></h1>
- <h3><strong>Titulo:</strong>  <?= Html::encode($model->Titulo) ?></h3>
- <?=  $model->Texto; ?>
+    <?= DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+            'ID',
+            'Titulo',
+            'Texto:ntext',
+            'Publicar',
+            'Fecha_creacion',
+            'Fecha_edicion',
+            'idAutor',
+        ],
+    ]) ?>
 
 </div>
