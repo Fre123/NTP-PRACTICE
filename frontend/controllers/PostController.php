@@ -9,6 +9,8 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\helpers\ArrayHelper;
+use yii\web\ForbiddenHttpException;
+use yii\filters\AccessControl;
 /**
  * PostController implements the CRUD actions for Post model.
  */
@@ -20,6 +22,16 @@ class PostController extends Controller
     public function behaviors()
     {
         return [
+          'access' => [
+          'class' => AccessControl::className(),
+          'rules' => [
+            [
+                'allow' => true,
+                'roles' => ['@'],
+            ],
+
+          ],
+          ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
