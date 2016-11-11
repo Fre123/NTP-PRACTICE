@@ -74,6 +74,25 @@ class SiteController extends Controller
     {
         return $this->render('index');
     }
+    /**
+     * Displays homepage.
+     *
+     * @return mixed
+     */
+    public function actionReveal()
+    {
+        return $this->render('reveal');
+    }
+
+    /**
+     * Displays homepage.
+     *
+     * @return mixed
+     */
+    public function actionDoc()
+    {
+        return $this->render('doc');
+    }
 
     /**
      * Logs in a user.
@@ -140,6 +159,8 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+
 
     /**
      * Signs user up.
