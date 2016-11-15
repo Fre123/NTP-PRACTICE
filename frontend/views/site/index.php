@@ -19,6 +19,23 @@ $this->title = 'PUCESE';
     <div class="body-content">
 
         <div class="row">
+
+
+          <div class="col-lg-4 hide">
+            <embed src="http://www.criticallayouts.com/Generators/photo-cube-3d/show.swf?baseURL=http://www.criticallayouts.com/Generators/photo-cube-3d/&clickURL=http://www.photocube3d.com/&clickLABEL=Photo Cube&rect=off&pic1=pic147889230396417223078.png&pic2=pic147889230580272099924.png&pic3=pic147889230783428878131.png&pic4=pic147889230971414662088.png&pic5=pic147889184593117740251.png&pic6=pic147889184793919025185.png&shadow=on&alpha=on&xrot=on&yrot=on&xangle=0&yangle=0&cl=16777215" quality="high" bgcolor="#ffffff" width="400" height="400" name="show" align="middle" wmode="transparent" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" >
+          </div>
+
+        <div class="col-lg-4 hide">
+          <embed src="http://www.criticallayouts.com/Generators/photo-cube-3d/show.swf?baseURL=http://www.criticallayouts.com/Generators/photo-cube-3d/&clickURL=http://www.photocube3d.com/&clickLABEL=Photo Cube&rect=off&pic1=pic147889230396417223078.png&pic2=pic147889230580272099924.png&pic3=pic147889230783428878131.png&pic4=pic147889230971414662088.png&pic5=pic147889184593117740251.png&pic6=pic147889184793919025185.png&shadow=on&alpha=on&xrot=on&yrot=on&xangle=0&yangle=0&cl=16777215" quality="high" bgcolor="#ffffff" width="400" height="400" name="show" align="middle" wmode="transparent" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" >
+        </div>
+
+        <div class="col-lg-4 hide">
+          <embed src="http://www.criticallayouts.com/Generators/photo-cube-3d/show.swf?baseURL=http://www.criticallayouts.com/Generators/photo-cube-3d/&clickURL=http://www.photocube3d.com/&clickLABEL=Photo Cube&rect=off&pic1=pic147889230396417223078.png&pic2=pic147889230580272099924.png&pic3=pic147889230783428878131.png&pic4=pic147889230971414662088.png&pic5=pic147889184593117740251.png&pic6=pic147889184793919025185.png&shadow=on&alpha=on&xrot=on&yrot=on&xangle=0&yangle=0&cl=16777215" quality="high" bgcolor="#ffffff" width="400" height="400" name="show" align="middle" wmode="transparent" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
+        </div>
+    </div>
+
+    <div class="row">
+
             <div class="col-lg-4">
 
                 <h2 class="bg-info text-center hide" > <strong>Testing</strong> </h2>
@@ -26,11 +43,9 @@ $this->title = 'PUCESE';
                 <div class="panel panel-success">
                 <!--div class="panel-heading"> <h3 class="panel-title">Testing</h3> </div-->
                 <div class="panel-body">
-                <div class="embed-responsive embed-responsive-16by9" align="center">
 
-                      <img class="img-circle"  src="http://www.wallpapereast.com/static/images/001_Fish-Wallpaper-HD_hkNsK33.jpg" alt="Generic placeholder image" width="300" height="250">
+                      <img class="img-circle"  src="http://www.pixelstalk.net/wp-content/uploads/2016/08/Computer-Desktop-Wallpapers-Full-HD.jpg" alt="Generic placeholder image" height="auto" width="100%" >
 
-                </div>
                 </div>
                 </div>
             </div>
@@ -41,11 +56,10 @@ $this->title = 'PUCESE';
                 <div class="panel panel-success">
                 <!--div class="panel-heading"> <h3 class="panel-title">Testing</h3> </div-->
                 <div class="panel-body">
-                <div class="embed-responsive embed-responsive-16by9">
-                  <div align="center">
-                      <img class="img-circle"  src="https://grafikoan.files.wordpress.com/2012/10/spheres-grafic-design-grafikoan-hd-300-p-2.png" alt="Generic placeholder image" width="300" height="250">
-                  </div>
-                </div>
+
+                      <img class="img-circle"  src="http://k38.kn3.net/taringa/2/2/2/1/6/1/07/fumateunpitito/17C.jpg?4912" height="auto" width="100%">
+
+
                 </div>
                 </div>
             </div>
@@ -56,11 +70,24 @@ $this->title = 'PUCESE';
                 <div class="panel panel-success">
                 <!--div class="panel-heading"> <h3 class="panel-title">Testing</h3> </div-->
                 <div class="panel-body">
-                <div class="embed-responsive embed-responsive-16by9">
-                  <div align="center">
-                      <img class="img-circle"  src="http://www.planwallpaper.com/static/images/best_modern_city_wallpaper_hd.jpg" alt="Generic placeholder image" width="300" height="250">
-                  </div>
+
+                      <img class="img-circle"  src="http://www.planwallpaper.com/static/images/best_modern_city_wallpaper_hd.jpg" alt="Generic placeholder image" height="auto" width="100%">
+
                 </div>
+                </div>
+            </div>
+        </div>
+      <div class="row">
+            <div class="col-lg-4">
+
+                <h2 class="bg-info text-center hide" > <strong>Testing</strong> </h2>
+
+                <div class="panel panel-success">
+                <!--div class="panel-heading"> <h3 class="panel-title">Testing</h3> </div-->
+                <div class="panel-body">
+
+                      <img class="img-circle"  src="http://ximages.net/images/58050064299448892212.jpg" alt="Generic placeholder image" height="auto" width="100%">
+
                 </div>
                 </div>
             </div>
@@ -71,11 +98,9 @@ $this->title = 'PUCESE';
                 <div class="panel panel-success">
                 <!--div class="panel-heading"> <h3 class="panel-title">Testing</h3> </div-->
                 <div class="panel-body">
-                <div class="embed-responsive embed-responsive-16by9">
-                  <div align="center">
-                      <img class="img-circle"  src="http://ximages.net/images/58050064299448892212.jpg" alt="Generic placeholder image" width="300" height="250">
-                  </div>
-                </div>
+
+                      <img class="img-circle"  src="http://www.wallpapereast.com/static/images/Wallpaper-HD-11F1.jpg" alt="Generic placeholder image" height="auto" width="100%">
+
                 </div>
                 </div>
             </div>
@@ -86,26 +111,9 @@ $this->title = 'PUCESE';
                 <div class="panel panel-success">
                 <!--div class="panel-heading"> <h3 class="panel-title">Testing</h3> </div-->
                 <div class="panel-body">
-                <div class="embed-responsive embed-responsive-16by9">
-                  <div align="center">
-                      <img class="img-circle"  src="http://www.wallpapereast.com/static/images/Wallpaper-HD-11F1.jpg" alt="Generic placeholder image" width="300" height="250">
-                  </div>
-                </div>
-                </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
 
-                <h2 class="bg-info text-center hide" > <strong>Testing</strong> </h2>
+                      <img class="img-circle"  src="http://www.planwallpaper.com/static/images/6768666-1080p-wallpapers.jpg" alt="Generic placeholder image" height="auto" width="100%">
 
-                <div class="panel panel-success">
-                <!--div class="panel-heading"> <h3 class="panel-title">Testing</h3> </div-->
-                <div class="panel-body">
-                <div class="embed-responsive embed-responsive-16by9">
-                  <div align="center">
-                      <img class="img-circle"  src="http://www.planwallpaper.com/static/images/6768666-1080p-wallpapers.jpg" alt="Generic placeholder image" width="300" height="250">
-                  </div>
-                </div>
                 </div>
                 </div>
             </div>
