@@ -60,7 +60,7 @@ class PostSearch extends Post
         // grid filtering conditions
         $query->andFilterWhere([
             'ID' => $this->ID,
-            'Publicar' => 1,
+            'Publicar' => $this->Publicar,
             'Fecha_creacion' => $this->Fecha_creacion,
             'Fecha_edicion' => $this->Fecha_edicion,
             'idAutor' => Yii::$app->user->identity->id,
