@@ -37,6 +37,13 @@ class RbacController extends Controller
         $auth->addChild($admin, $updatePost);
         $auth->addChild($admin, $author);
 
+        // add "admin" role and give this role the "updatePost" permission
+        // as well as the permissions of the "author" role
+        $admin = $auth->createRole('marc');
+        $auth->add($admin);
+        $auth->addChild($admin, $updatePost);
+        $auth->addChild($admin, $author);
+
         // Assign roles to users. 1 and 2 are IDs returned by IdentityInterface::getId()
         // usually implemented in your User model.
         $auth->assign($author, 2);

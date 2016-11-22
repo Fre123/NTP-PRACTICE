@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
           </div>
           <div class="modal-body">
         <h>
-          Estimado usuario su post creado será revisado por el administrador para su posterior aprobación, gracias por su comprención.
+          Estimado usuario su post creado será revisado por el administrador para su posterior aprobación, gracias por su comprensión.
         </p>
           </div>
           <div class="modal-footer">
