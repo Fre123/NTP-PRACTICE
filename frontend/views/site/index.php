@@ -16,7 +16,7 @@ $this->title = 'PUCESE';
 
     <!--/div-->
 
-    <div class="body-content">
+    <div class="body-content" >
 
         <div class="row">
 

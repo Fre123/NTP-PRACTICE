@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap-theme.css" >
+  <link rel="stylesheet" href="css/bootstrap.min.css" >
+  <link rel="stylesheet" href="css/prism.css" >
+  <script src="js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="scripts/shCore.js"></script>
+  <script type="text/javascript" src="scripts/shBrushJScript.js"></script>
+  <link type="text/css" rel="stylesheet" href="styles/shCoreDefault.css"/>
+  <script type="text/javascript">SyntaxHighlighter.all();</script>
+
+</head>
+<body>
+
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="jumbotron center">
+       <h1>REST</h1>
+       <p>Breve Descripción de  <code>Rest </code></p>
+     </div>
+  </div>
+
+<div class="row">
+
+<strong>Ventajas de Rest</strong>
+<ol>
+
+  <li>
+
+    Rest describe a cualquier interfaz que transmite datos específicos de un domino sobre HTTP sin una capa adicional, como hace SOAP.
+    Existen una variedad de clientes que existen en la web, tales como, estaciones de trabajo, sistemas industriales, dispositivos móviles,     etc. Lo que no degrada el rendimiento de rest.
+
+  </li>
+
+</ol>
+<strong>Desventajas de Rest </strong>
+<ol>
+  <li>
+   Rest No es un estándar, es tan solo un estilo de arquitectura, pero se basa en estandares tales como HTTP, URL, XML, etc.
+  </li>
+</ol>
+
+<strong>¿Cuál es el formato de Rest?</strong>
+<ol>
+  <li>
+ No se puede acceder directamente al recurso por lo que es importante obtener una representación que puede ser un documento HTML, XML o una imagen dependiendo de la situación.
+A continuación se ha usado XML como presentación, siendo el principal formato para intercambio de información.
+  </li>
+</ol>
+
+
+
+
+</div>
+
+<div class="row">
+
+<pre class="brush: js;">
+
+<employee xmlns='HTTP://example.org/my-example-ns/'>
+<name>Full name goes here.</name>
+<title>Persons title goes here.</title>
+<phone-number>Phone number goes here.</phone-number>
+</employee>
+
+</pre>
+
+</div>
+
+
+</div>
+
+<script src="js/prism.js"></script>
+</body>
+</html>

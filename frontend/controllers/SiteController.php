@@ -83,6 +83,15 @@ class SiteController extends Controller
     {
         return $this->render('reveal');
     }
+    /**
+     * Displays homepage.
+     *
+     * @return mixed
+     */
+    public function actionService()
+    {
+        return $this->render('service');
+    }
 
     /**
      * Displays homepage.
