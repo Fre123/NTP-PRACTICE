@@ -11,11 +11,14 @@ use yii\filters\VerbFilter;
 use yii\helpers\ArrayHelper;
 use yii\web\ForbiddenHttpException;
 use yii\filters\AccessControl;
+use yii\rest\ActiveController;
 /**
  * PostController implements the CRUD actions for Post model.
  */
 class PostController extends Controller
 {
+  
+
     /**
      * @inheritdoc
      */
